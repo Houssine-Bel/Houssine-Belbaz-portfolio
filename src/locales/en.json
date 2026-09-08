@@ -1,0 +1,211 @@
+{
+  "seo": {
+    "title": "Houssine Belbaz — Full-Stack Developer in Rabat",
+    "description": "Portfolio of Houssine Belbaz, a Full-Stack Developer specializing in React.js, Laravel, Express.js, MySQL, SaaS and CRM systems.",
+    "keywords": "Houssine Belbaz, full-stack developer, React, Laravel, Express, Rabat, Morocco"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Change language"
+  },
+  "hero": {
+    "availability": "Available for new opportunities",
+    "eyebrow": "Full-Stack Developer · Rabat, Morocco",
+    "role": "Full-Stack Developer",
+    "greeting": "Hello, I’m",
+    "name": "Houssine Belbaz",
+    "headline": "I turn business needs into dependable web products.",
+    "headlinePrefix": "I turn business needs into dependable",
+    "headlineAccent": "web products.",
+    "description": "I build high-performing SaaS platforms, CRM systems and internal tools — from polished React interfaces to robust APIs and optimized databases.",
+    "primaryCta": "View my projects",
+    "secondaryCta": "Contact me",
+    "downloadCta": "Download CV",
+    "imageAlt": "Portrait of Houssine Belbaz, Full-Stack Developer",
+    "scroll": "Explore",
+    "visualLabel": "Product architecture",
+    "visualStatus": "System operational",
+    "visualFrontend": "User experience",
+    "visualBackend": "Business logic",
+    "visualData": "Reliable data",
+    "visualAutomation": "Automated flows",
+    "stats": [
+      { "value": "4", "label": "featured projects" },
+      { "value": "3", "label": "layers covered" },
+      { "value": "100%", "label": "solution focused" }
+    ]
+  },
+  "about": {
+    "label": "About",
+    "title": "A product mindset, from code to production.",
+    "description": "I’m a results-driven Full-Stack Developer building and maintaining applications that simplify daily operations. My approach connects a clear interface, solid back-end architecture and well-structured data.",
+    "body": "Comfortable in Agile/Scrum environments, I work with teams to understand requirements, deliver useful features and continuously improve product stability.",
+    "cards": [
+      { "number": "01", "title": "Product", "description": "Turn a business need into a simple, functional user journey." },
+      { "number": "02", "title": "Engineering", "description": "Build maintainable interfaces, APIs and data models." },
+      { "number": "03", "title": "Delivery", "description": "Automate, test and deploy with consistent attention to quality." }
+    ]
+  },
+  "skills": {
+    "label": "Expertise",
+    "title": "The technology behind complete products.",
+    "description": "A technical foundation covering the entire development cycle, from user experience to deployment.",
+    "groups": [
+      { "key": "frontend", "title": "Front-end", "description": "Modern, responsive interfaces", "items": ["React.js", "JavaScript ES6+", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"] },
+      { "key": "backend", "title": "Back-end", "description": "Reliable services and structured APIs", "items": ["PHP", "Laravel", "Node.js", "Express.js", "Java", "Spring Boot", "REST APIs"] },
+      { "key": "database", "title": "Databases", "description": "Structured data and fast queries", "items": ["MySQL", "Database management", "Query optimization"] },
+      { "key": "devops", "title": "DevOps & tools", "description": "A controlled delivery workflow", "items": ["Git", "Docker", "CI/CD", "Postman", "Cloudflare", "Domain management"] },
+      { "key": "automation", "title": "Automation & Web", "description": "Smoother day-to-day operations", "items": ["n8n", "WordPress", "Elementor", "Google Analytics 4", "SEO"] },
+      { "key": "methods", "title": "Methods", "description": "Effective collaboration", "items": ["Agile / Scrum", "Problem-solving", "Collaboration", "Adaptability"] }
+    ]
+  },
+  "experience": {
+    "label": "Journey",
+    "title": "Professional experience.",
+    "description": "Experience focused on shipping practical features and continuously improving applications.",
+    "present": "Present",
+    "items": [
+      {
+        "role": "Full-Stack Developer",
+        "company": "Think Group",
+        "location": "Rabat, Morocco",
+        "date": "March 2026 — Present",
+        "summary": "Developing and maintaining SaaS platforms, CRM systems and internal tools.",
+        "bullets": [
+          "Building React.js interfaces and back-end/REST API services with Laravel and Express.js.",
+          "Implementing n8n automations and contributing to CI/CD deployments.",
+          "Resolving application issues and optimizing MySQL queries to strengthen stability."
+        ]
+      },
+      {
+        "role": "Final Training Intern",
+        "company": "Ministry of National Education",
+        "location": "Morocco",
+        "date": "April 2024",
+        "summary": "Built interactive web interfaces using HTML, CSS and JavaScript.",
+        "bullets": [
+          "Developed quizzes and interactive components aligned with defined requirements.",
+          "Worked with the team to analyze needs, implement features and test deliverables."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Selected projects",
+    "title": "Platforms designed for real work.",
+    "description": "Four professional solutions designed to centralize information, speed up collaboration and create useful web experiences.",
+    "viewPreview": "Enlarge preview",
+    "closePreview": "Close preview",
+    "showImage": "Show image {{number}}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "discuss": "Discuss the project",
+    "items": [
+      {
+        "number": "01",
+        "name": "ARZ CRM",
+        "type": "Sales & opportunity management",
+        "description": "A CRM platform that brings sales tracking and user communication together in one coherent experience.",
+        "badge": "Professional product",
+        "imageAlts": ["Sales dashboard of the ARZ CRM platform", "Secure WhatsApp messaging module of the ARZ CRM platform"],
+        "features": ["Decision dashboard", "Sales pipeline", "Messaging & chatbot", "Activity tracking pages"],
+        "tech": ["React.js", "Laravel", "Express.js", "MySQL"]
+      },
+      {
+        "number": "02",
+        "name": "Think OS",
+        "type": "Internal operations & teams",
+        "description": "An internal workspace that brings together tasks, communication and day-to-day company operations.",
+        "badge": "Professional product",
+        "imageAlts": ["Operations dashboard of the Think OS internal platform"],
+        "features": ["Task assignment & tracking", "Messaging & chatbot", "Human resources management", "Shared calendar"],
+        "tech": ["React.js", "Laravel", "Express.js", "MySQL"]
+      },
+      {
+        "number": "03",
+        "name": "AI Content Agent",
+        "type": "Editorial agent & automation",
+        "description": "An AI agent orchestrated with n8n that turns a brief into a complete content pack, from research through quality control and delivery to Google Drive.",
+        "badge": "AI agent",
+        "imageAlts": ["Complete AI Content Agent workflow architecture", "List of n8n workflows powering the AI Content Agent editorial system"],
+        "features": ["Research & source validation", "Article and visual generation", "LinkedIn & Instagram content", "Quality control & Drive export"],
+        "tech": ["n8n", "AI Agents", "Google Drive", "LinkedIn", "Instagram"]
+      },
+      {
+        "number": "04",
+        "name": "HEL Dental Center",
+        "type": "Showcase website for a dental practice",
+        "description": "A professional website built for a dental practice in Casablanca, with a clear presentation of the dentist, available treatments and quick contact options.",
+        "badge": "Client project",
+        "imageAlts": ["Homepage of the HEL Dental Center website", "Services page of the HEL Dental Center website"],
+        "features": ["Responsive homepage", "Practice presentation", "Detailed dental services", "Blog, contact & appointments"],
+        "tech": ["WordPress", "Elementor", "Responsive Design", "SEO"]
+      }
+    ]
+  },
+  "education": {
+    "label": "Education",
+    "title": "A foundation in software engineering.",
+    "viewDiploma": "View diploma",
+    "diplomaPreview": "Diploma preview",
+    "closeDiploma": "Close diploma",
+    "items": [
+      { "degree": "Bachelor’s Degree in Software Engineering and Information Systems", "school": "ENSA Kenitra", "location": "Kenitra, Morocco", "date": "Oct. 2024 — Aug. 2025" },
+      { "degree": "Specialized Technician Diploma in Full-Stack Web Development", "school": "NTIC Rabat", "location": "Rabat, Morocco", "date": "Sept. 2022 — Aug. 2024" }
+    ]
+  },
+  "certifications": {
+    "label": "Certifications",
+    "title": "Learn, deepen, evolve.",
+    "items": [
+      { "name": "Introduction to Cybersecurity", "issuer": "Cisco", "tag": "Cybersecurity" },
+      { "name": "Preparatory Course for Computer Science", "issuer": "Virtual University of Bavaria", "tag": "Computer Science" }
+    ]
+  },
+  "languages": {
+    "label": "Languages",
+    "title": "Communicating beyond code.",
+    "description": "A multilingual profile, comfortable in varied collaboration settings.",
+    "items": [
+      { "name": "Arabic", "level": "Native", "value": 100 },
+      { "name": "English", "level": "B2 · Upper intermediate", "value": 75 },
+      { "name": "German", "level": "B1 · Intermediate", "value": 58 },
+      { "name": "French", "level": "A2 · Elementary", "value": 40 }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let’s build something useful.",
+    "description": "An opportunity, a product to build, or simply an idea to discuss? Send me a message — I’ll be happy to get back to you.",
+    "detailsTitle": "Contact details",
+    "location": "Rabat, Morocco",
+    "locationLabel": "Location",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "linkedinLabel": "LinkedIn",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Full name",
+      "email": "Your email",
+      "emailPlaceholder": "you@company.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Let’s talk about your project",
+      "message": "Your message",
+      "messagePlaceholder": "Tell me about what you need...",
+      "submit": "Send message",
+      "privacy": "Your information is only used to reply to your message."
+    }
+  },
+  "footer": {
+    "tagline": "Design with clarity. Build with care.",
+    "copyright": "© {{year}} Houssine Belbaz. All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}

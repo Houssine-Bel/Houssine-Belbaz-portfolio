@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Houssine Belbaz logo">
+  <defs>
+    <linearGradient id="blue" x1="45" y1="8" x2="45" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38c7ff"/>
+      <stop offset=".5" stop-color="#1598f4"/>
+      <stop offset="1" stop-color="#1760e8"/>
+    </linearGradient>
+    <linearGradient id="white" x1="14" y1="9" x2="32" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8e0ec"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="#050a17"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="15.5" fill="none" stroke="#5eb8ff" stroke-opacity=".45"/>
+  <path d="M11 9h9v18h13V9h9v46h-9V36H20v19h-9V9Z" fill="url(#white)"/>
+  <path d="M32 9h11.5C53 9 58.5 13.8 58.5 21.5c0 5-2.5 8.7-6.7 10.7 5.1 1.7 8.2 5.8 8.2 11.3C60 52 53.8 56 43.2 56H30.5l8.4-8.2h4.5c5 0 7.6-1.6 7.6-4.8 0-3.3-2.6-5-7.6-5H36v-8h6.8c4.4 0 6.8-2 6.8-5.8 0-3.7-2.4-5.8-6.8-5.8H41v18.3l-9 8.7V9Z" fill="url(#blue)"/>
+  <path d="m20 55 21-20v10L30.5 55H20Z" fill="#050a17"/>
+</svg>

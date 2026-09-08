@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">AI Content Agent editorial workflow</title>
+  <desc id="desc">Seven-step n8n workflow from brief normalization to research, strategy, content production, quality control and Google Drive delivery.</desc>
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" opacity=".08"/>
+    </pattern>
+    <linearGradient id="header" x1="0" x2="1">
+      <stop stop-color="#191919"/>
+      <stop offset="1" stop-color="#101722"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0l10 5-10 5z" fill="#66758a"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="700" rx="30" fill="#121212"/>
+  <rect y="82" width="1600" height="618" fill="url(#dots)"/>
+  <rect width="1600" height="82" rx="30" fill="url(#header)"/>
+  <path d="M0 82h1600" stroke="#ffffff" stroke-opacity=".1"/>
+
+  <g transform="translate(34 24)">
+    <circle cx="18" cy="17" r="6" fill="#ff4f6d"/>
+    <circle cx="42" cy="7" r="6" fill="none" stroke="#ff4f6d" stroke-width="4"/>
+    <circle cx="42" cy="27" r="6" fill="none" stroke="#ff4f6d" stroke-width="4"/>
+    <path d="M23 14l13-5M23 20l13 5" stroke="#ff4f6d" stroke-width="4"/>
+    <text x="64" y="25" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700">n8n</text>
+  </g>
+  <text x="150" y="51" fill="#fff" font-family="Arial, sans-serif" font-size="25" font-weight="700">AI Content Agent</text>
+  <text x="365" y="51" fill="#8f9aaa" font-family="Arial, sans-serif" font-size="17">/  Orchestrateur éditorial</text>
+  <g transform="translate(1350 20)">
+    <rect width="202" height="42" rx="13" fill="#1d2a24" stroke="#34d399" stroke-opacity=".35"/>
+    <circle cx="24" cy="21" r="6" fill="#34d399" filter="url(#glow)"/>
+    <text x="42" y="27" fill="#95f0c9" font-family="Arial, sans-serif" font-size="15" font-weight="700">7 ÉTAPES ACTIVES</text>
+  </g>
+
+  <text x="62" y="145" fill="#5eb8ff" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3">WORKFLOW PRINCIPAL</text>
+  <text x="62" y="178" fill="#eef4fb" font-family="Arial, sans-serif" font-size="27" font-weight="700">Du brief au pack éditorial prêt à publier</text>
+  <text x="62" y="207" fill="#8290a3" font-family="Arial, sans-serif" font-size="16">Recherche, stratégie, production multicanale, contrôle qualité et livraison automatisée.</text>
+
+  <g fill="none" stroke="#66758a" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M242 397h54"/><path d="M456 397h54"/><path d="M670 397h54"/><path d="M884 397h54"/><path d="M1098 397h54"/><path d="M1312 397h54"/>
+  </g>
+
+  <g transform="translate(82 330)">
+    <rect width="160" height="134" rx="18" fill="#17202b" stroke="#5eb8ff" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#5eb8ff" fill-opacity=".15"/>
+    <path d="M30 28h14M30 35h14M30 42h9" stroke="#5eb8ff" stroke-width="3" stroke-linecap="round"/>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Brief d’entrée</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Demande unique</text>
+  </g>
+  <g transform="translate(296 330)">
+    <rect width="160" height="134" rx="18" fill="#1a1927" stroke="#a78bfa" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#a78bfa" fill-opacity=".14"/>
+    <text x="28" y="45" fill="#a78bfa" font-family="monospace" font-size="22" font-weight="700">{ }</text>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Normaliser</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Contexte &amp; format</text>
+  </g>
+  <g transform="translate(510 330)">
+    <rect width="160" height="134" rx="18" fill="#151f25" stroke="#34d399" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#34d399" fill-opacity=".13"/>
+    <circle cx="34" cy="34" r="8" fill="none" stroke="#34d399" stroke-width="3"/><path d="m40 40 7 7" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Recherche</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Sources &amp; preuves</text>
+  </g>
+  <g transform="translate(724 330)">
+    <rect width="160" height="134" rx="18" fill="#201d16" stroke="#fbbf24" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#fbbf24" fill-opacity=".13"/>
+    <path d="m28 43 7-15 5 10 8-6" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Stratégie</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Angle éditorial</text>
+  </g>
+  <g transform="translate(938 330)">
+    <rect width="160" height="134" rx="18" fill="#211a1f" stroke="#fb7185" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#fb7185" fill-opacity=".13"/>
+    <path d="M28 29h18v16H28zM32 25h18v16" fill="none" stroke="#fb7185" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Studio contenu</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Blog, image, social</text>
+  </g>
+  <g transform="translate(1152 330)">
+    <rect width="160" height="134" rx="18" fill="#171d29" stroke="#60a5fa" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#60a5fa" fill-opacity=".13"/>
+    <path d="m28 37 6 6 13-15" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Qualité</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Contrôle &amp; pack</text>
+  </g>
+  <g transform="translate(1366 330)">
+    <rect width="160" height="134" rx="18" fill="#17221d" stroke="#34d399" stroke-opacity=".65"/>
+    <rect x="18" y="18" width="38" height="38" rx="11" fill="#34d399" fill-opacity=".13"/>
+    <path d="M28 31h9l4 5h8v12H28z" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="18" y="81" fill="#fff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Google Drive</text>
+    <text x="18" y="106" fill="#8290a3" font-family="Arial, sans-serif" font-size="13">Livraison finale</text>
+  </g>
+
+  <g transform="translate(82 528)">
+    <rect width="1444" height="108" rx="18" fill="#ffffff" fill-opacity=".025" stroke="#ffffff" stroke-opacity=".08"/>
+    <text x="26" y="37" fill="#8290a3" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">SORTIES</text>
+    <g transform="translate(26 54)" font-family="Arial, sans-serif" font-size="14" font-weight="700">
+      <rect width="180" height="34" rx="10" fill="#5eb8ff" fill-opacity=".1"/><text x="18" y="22" fill="#8ed0ff">Articles de blog</text>
+      <rect x="194" width="166" height="34" rx="10" fill="#a78bfa" fill-opacity=".1"/><text x="212" y="22" fill="#c4b5fd">Visuels générés</text>
+      <rect x="374" width="177" height="34" rx="10" fill="#60a5fa" fill-opacity=".1"/><text x="392" y="22" fill="#93c5fd">Posts LinkedIn</text>
+      <rect x="565" width="185" height="34" rx="10" fill="#fb7185" fill-opacity=".1"/><text x="583" y="22" fill="#fda4af">Posts Instagram</text>
+      <rect x="764" width="209" height="34" rx="10" fill="#34d399" fill-opacity=".1"/><text x="782" y="22" fill="#6ee7b7">Pack final dans Drive</text>
+    </g>
+  </g>
+</svg>

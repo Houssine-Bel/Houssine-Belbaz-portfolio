@@ -1,0 +1,211 @@
+{
+  "seo": {
+    "title": "Houssine Belbaz — Full-Stack-Entwickler in Rabat",
+    "description": "Portfolio von Houssine Belbaz, Full-Stack-Entwickler mit Schwerpunkt auf React.js, Laravel, Express.js, MySQL, SaaS- und CRM-Systemen.",
+    "keywords": "Houssine Belbaz, Full-Stack-Entwickler, React, Laravel, Express, Rabat, Marokko"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Profil",
+    "skills": "Kenntnisse",
+    "experience": "Erfahrung",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache ändern"
+  },
+  "hero": {
+    "availability": "Verfügbar für neue berufliche Möglichkeiten",
+    "eyebrow": "Full-Stack-Entwickler · Rabat, Marokko",
+    "role": "Full-Stack-Entwickler",
+    "greeting": "Hallo, ich bin",
+    "name": "Houssine Belbaz",
+    "headline": "Ich verwandle Geschäftsanforderungen in zuverlässige Webprodukte.",
+    "headlinePrefix": "Ich verwandle Geschäftsanforderungen in zuverlässige",
+    "headlineAccent": "Webprodukte.",
+    "description": "Ich entwickle leistungsstarke SaaS-Plattformen, CRM-Systeme und interne Tools — von modernen React-Oberflächen bis zu robusten APIs und optimierten Datenbanken.",
+    "primaryCta": "Projekte ansehen",
+    "secondaryCta": "Kontakt aufnehmen",
+    "downloadCta": "Lebenslauf herunterladen",
+    "imageAlt": "Porträt von Houssine Belbaz, Full-Stack-Entwickler",
+    "scroll": "Entdecken",
+    "visualLabel": "Produktarchitektur",
+    "visualStatus": "System betriebsbereit",
+    "visualFrontend": "Benutzererlebnis",
+    "visualBackend": "Geschäftslogik",
+    "visualData": "Zuverlässige Daten",
+    "visualAutomation": "Automatisierte Abläufe",
+    "stats": [
+      { "value": "4", "label": "ausgewählte Projekte" },
+      { "value": "3", "label": "abgedeckte Ebenen" },
+      { "value": "100%", "label": "lösungsorientiert" }
+    ]
+  },
+  "about": {
+    "label": "Über mich",
+    "title": "Produktdenken — vom Code bis zum produktiven Einsatz.",
+    "description": "Als ergebnisorientierter Full-Stack-Entwickler entwickle und betreue ich Anwendungen, die tägliche Abläufe vereinfachen. Mein Ansatz verbindet klare Benutzeroberflächen, eine solide Back-End-Architektur und gut strukturierte Daten.",
+    "body": "In Agile- und Scrum-Umgebungen arbeite ich eng mit Teams zusammen, analysiere Anforderungen, liefere nützliche Funktionen und verbessere kontinuierlich die Stabilität der Produkte.",
+    "cards": [
+      { "number": "01", "title": "Produkt", "description": "Geschäftliche Anforderungen in eine einfache und funktionale Benutzerführung übersetzen." },
+      { "number": "02", "title": "Engineering", "description": "Wartbare Oberflächen, APIs und Datenmodelle entwickeln." },
+      { "number": "03", "title": "Bereitstellung", "description": "Automatisieren, testen und mit konsequentem Qualitätsanspruch bereitstellen." }
+    ]
+  },
+  "skills": {
+    "label": "Expertise",
+    "title": "Die Technologie hinter vollständigen Produkten.",
+    "description": "Eine technische Grundlage für den gesamten Entwicklungszyklus — vom Benutzererlebnis bis zur Bereitstellung.",
+    "groups": [
+      { "key": "frontend", "title": "Front-End", "description": "Moderne, responsive Oberflächen", "items": ["React.js", "JavaScript ES6+", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"] },
+      { "key": "backend", "title": "Back-End", "description": "Zuverlässige Dienste und strukturierte APIs", "items": ["PHP", "Laravel", "Node.js", "Express.js", "Java", "Spring Boot", "REST-APIs"] },
+      { "key": "database", "title": "Datenbanken", "description": "Strukturierte Daten und schnelle Abfragen", "items": ["MySQL", "Datenbankverwaltung", "Abfrageoptimierung"] },
+      { "key": "devops", "title": "DevOps & Tools", "description": "Ein kontrollierter Bereitstellungsprozess", "items": ["Git", "Docker", "CI/CD", "Postman", "Cloudflare", "Domainverwaltung"] },
+      { "key": "automation", "title": "Automatisierung & Web", "description": "Effizientere tägliche Abläufe", "items": ["n8n", "WordPress", "Elementor", "Google Analytics 4", "SEO"] },
+      { "key": "methods", "title": "Methoden", "description": "Effektive Zusammenarbeit", "items": ["Agile / Scrum", "Problemlösung", "Zusammenarbeit", "Anpassungsfähigkeit"] }
+    ]
+  },
+  "experience": {
+    "label": "Werdegang",
+    "title": "Berufserfahrung.",
+    "description": "Erfahrung mit Fokus auf praxisnahe Funktionen und die kontinuierliche Verbesserung von Anwendungen.",
+    "present": "Heute",
+    "items": [
+      {
+        "role": "Full-Stack-Entwickler",
+        "company": "Think Group",
+        "location": "Rabat, Marokko",
+        "date": "März 2026 — Heute",
+        "summary": "Entwicklung und Wartung von SaaS-Plattformen, CRM-Systemen und internen Tools.",
+        "bullets": [
+          "Entwicklung von React.js-Oberflächen sowie Back-End- und REST-API-Diensten mit Laravel und Express.js.",
+          "Umsetzung von n8n-Automatisierungen und Mitwirkung an CI/CD-Bereitstellungen.",
+          "Behebung von Anwendungsproblemen und Optimierung von MySQL-Abfragen zur Verbesserung der Stabilität."
+        ]
+      },
+      {
+        "role": "Abschlusspraktikant",
+        "company": "Ministerium für nationale Bildung",
+        "location": "Marokko",
+        "date": "April 2024",
+        "summary": "Entwicklung interaktiver Weboberflächen mit HTML, CSS und JavaScript.",
+        "bullets": [
+          "Entwicklung von Quiz-Anwendungen und interaktiven Komponenten nach definierten Anforderungen.",
+          "Zusammenarbeit im Team bei Anforderungsanalyse, Implementierung und Prüfung der Ergebnisse."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Ausgewählte Projekte",
+    "title": "Plattformen für die tägliche Praxis.",
+    "description": "Vier professionelle Lösungen zur Zentralisierung von Informationen, Beschleunigung der Zusammenarbeit und Gestaltung nützlicher Web-Erlebnisse.",
+    "viewPreview": "Vorschau vergrößern",
+    "closePreview": "Vorschau schließen",
+    "showImage": "Bild {{number}} anzeigen",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "discuss": "Projekt besprechen",
+    "items": [
+      {
+        "number": "01",
+        "name": "ARZ CRM",
+        "type": "Vertriebs- und Chancenmanagement",
+        "description": "Eine CRM-Plattform, die Vertriebsverfolgung und Benutzerkommunikation in einer einheitlichen Umgebung zusammenführt.",
+        "badge": "Professionelles Produkt",
+        "imageAlts": ["Vertriebsdashboard der ARZ-CRM-Plattform", "Sicheres WhatsApp-Nachrichtenmodul der ARZ-CRM-Plattform"],
+        "features": ["Entscheidungsdashboard", "Vertriebspipeline", "Messaging & Chatbot", "Aktivitätsverfolgung"],
+        "tech": ["React.js", "Laravel", "Express.js", "MySQL"]
+      },
+      {
+        "number": "02",
+        "name": "Think OS",
+        "type": "Interne Abläufe & Teams",
+        "description": "Ein interner Arbeitsbereich, der Aufgaben, Kommunikation und die täglichen Unternehmensabläufe zusammenführt.",
+        "badge": "Professionelles Produkt",
+        "imageAlts": ["Steuerungsdashboard der internen Think-OS-Plattform"],
+        "features": ["Aufgabenverteilung & Nachverfolgung", "Messaging & Chatbot", "Personalverwaltung", "Gemeinsamer Kalender"],
+        "tech": ["React.js", "Laravel", "Express.js", "MySQL"]
+      },
+      {
+        "number": "03",
+        "name": "AI Content Agent",
+        "type": "Redaktionsagent & Automatisierung",
+        "description": "Ein mit n8n orchestrierter KI-Agent, der ein Briefing in ein vollständiges Content-Paket verwandelt — von der Recherche über die Qualitätskontrolle bis zur Ablage in Google Drive.",
+        "badge": "KI-Agent",
+        "imageAlts": ["Vollständige Workflow-Architektur des AI Content Agent", "Liste der n8n-Workflows des redaktionellen AI Content Agent"],
+        "features": ["Recherche & Quellenprüfung", "Erstellung von Artikeln und Visuals", "LinkedIn- & Instagram-Inhalte", "Qualitätskontrolle & Drive-Export"],
+        "tech": ["n8n", "KI-Agenten", "Google Drive", "LinkedIn", "Instagram"]
+      },
+      {
+        "number": "04",
+        "name": "HEL Dentalzentrum",
+        "type": "Unternehmenswebsite für eine Zahnarztpraxis",
+        "description": "Eine professionelle Website für eine Zahnarztpraxis in Casablanca mit einer klaren Vorstellung des Zahnarztes, der angebotenen Behandlungen und schnellen Kontaktmöglichkeiten.",
+        "badge": "Kundenprojekt",
+        "imageAlts": ["Startseite der Website des HEL Dentalzentrums", "Leistungsseite der Website des HEL Dentalzentrums"],
+        "features": ["Responsive Startseite", "Vorstellung der Praxis", "Detaillierte Zahnleistungen", "Blog, Kontakt & Termine"],
+        "tech": ["WordPress", "Elementor", "Responsive Design", "SEO"]
+      }
+    ]
+  },
+  "education": {
+    "label": "Ausbildung",
+    "title": "Ein solides Fundament im Software Engineering.",
+    "viewDiploma": "Diplom ansehen",
+    "diplomaPreview": "Diplomvorschau",
+    "closeDiploma": "Diplom schließen",
+    "items": [
+      { "degree": "Bachelorabschluss in Software Engineering und Informationssystemen", "school": "ENSA Kenitra", "location": "Kenitra, Marokko", "date": "Okt. 2024 — Aug. 2025" },
+      { "degree": "Diplom als spezialisierter Techniker für Full-Stack-Webentwicklung", "school": "NTIC Rabat", "location": "Rabat, Marokko", "date": "Sept. 2022 — Aug. 2024" }
+    ]
+  },
+  "certifications": {
+    "label": "Zertifikate",
+    "title": "Lernen, vertiefen, weiterentwickeln.",
+    "items": [
+      { "name": "Introduction to Cybersecurity", "issuer": "Cisco", "tag": "Cybersicherheit" },
+      { "name": "Preparatory Course for Computer Science", "issuer": "Virtuelle Hochschule Bayern", "tag": "Informatik" }
+    ]
+  },
+  "languages": {
+    "label": "Sprachen",
+    "title": "Kommunikation über den Code hinaus.",
+    "description": "Ein mehrsprachiges Profil für die Zusammenarbeit in unterschiedlichen Umgebungen.",
+    "items": [
+      { "name": "Arabisch", "level": "Muttersprache", "value": 100 },
+      { "name": "Englisch", "level": "B2 · Gute Mittelstufe", "value": 75 },
+      { "name": "Deutsch", "level": "B1 · Mittelstufe", "value": 58 },
+      { "name": "Französisch", "level": "A2 · Grundkenntnisse", "value": 40 }
+    ]
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lassen Sie uns etwas Nützliches entwickeln.",
+    "description": "Eine neue Möglichkeit, ein zu entwickelndes Produkt oder einfach eine Idee? Schreiben Sie mir — ich melde mich gerne bei Ihnen.",
+    "detailsTitle": "Kontaktdaten",
+    "location": "Rabat, Marokko",
+    "locationLabel": "Standort",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "linkedinLabel": "LinkedIn",
+    "form": {
+      "name": "Ihr Name",
+      "namePlaceholder": "Vollständiger Name",
+      "email": "Ihre E-Mail-Adresse",
+      "emailPlaceholder": "sie@unternehmen.de",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Sprechen wir über Ihr Projekt",
+      "message": "Ihre Nachricht",
+      "messagePlaceholder": "Beschreiben Sie kurz, was Sie benötigen...",
+      "submit": "Nachricht senden",
+      "privacy": "Ihre Angaben werden ausschließlich zur Beantwortung Ihrer Nachricht verwendet."
+    }
+  },
+  "footer": {
+    "tagline": "Mit Klarheit gestalten. Mit Sorgfalt entwickeln.",
+    "copyright": "© {{year}} Houssine Belbaz. Alle Rechte vorbehalten.",
+    "backToTop": "Nach oben"
+  }
+}

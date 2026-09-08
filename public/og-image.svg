@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(980 100) rotate(130) scale(580 500)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5eb8ff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#5eb8ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#fff" stroke-opacity=".035"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#080d17"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="74" y="72" width="66" height="66" rx="18" fill="#5eb8ff" fill-opacity=".1" stroke="#5eb8ff" stroke-opacity=".4"/>
+  <text x="107" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5eb8ff">HB</text>
+  <text x="74" y="258" font-family="Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-3" fill="#fff">Houssine Belbaz.</text>
+  <text x="78" y="324" font-family="Arial, sans-serif" font-size="31" fill="#5eb8ff">Full-Stack Developer</text>
+  <text x="78" y="390" font-family="Arial, sans-serif" font-size="25" fill="#98a4b7">React.js · Laravel · Express.js · MySQL</text>
+  <text x="78" y="508" font-family="Arial, sans-serif" font-size="21" fill="#fff" fill-opacity=".72">Rabat, Morocco</text>
+  <circle cx="1050" cy="488" r="62" fill="#5eb8ff" fill-opacity=".08" stroke="#5eb8ff" stroke-opacity=".24"/>
+  <circle cx="1050" cy="488" r="31" fill="#5eb8ff" fill-opacity=".12" stroke="#5eb8ff" stroke-opacity=".4"/>
+  <circle cx="1050" cy="488" r="7" fill="#5eb8ff"/>
+</svg>
