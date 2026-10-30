@@ -60,7 +60,7 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="glass mx-auto flex h-16 max-w-7xl items-center justify-between rounded-2xl px-4 sm:px-5">
+      <div className="glass studio-header mx-auto flex h-16 max-w-7xl items-center justify-between rounded-2xl px-4 sm:px-5">
         <a
           href="#home"
           onClick={handleNavigate}

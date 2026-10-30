@@ -24,9 +24,9 @@ export default function AnimatedSection({
       aria-labelledby={labelledBy}
       data-active={sectionIsActive}
       className={`content-auto-section relative py-20 md:py-28 lg:py-32 ${className}`}
-      initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 30 }}
+      initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.02, margin: "100px 0px" }}
       transition={{ duration: shouldReduceMotion ? 0.2 : 0.7, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}

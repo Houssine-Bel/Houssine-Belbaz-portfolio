@@ -19,7 +19,7 @@ export default function SectionHeading({
 
   return (
     <motion.div
-      className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
+      className={`section-heading ${centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.65 }}
@@ -45,8 +45,8 @@ export default function SectionHeading({
         id={id}
         className="text-balance font-display text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl"
         variants={{
-          hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 22, filter: shouldReduceMotion ? "blur(0px)" : "blur(8px)" },
-          visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: .65, ease: [0.16, 1, 0.3, 1] } },
+          hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 22 },
+          visible: { opacity: 1, y: 0, transition: { duration: .65, ease: [0.16, 1, 0.3, 1] } },
         }}
       >
         {title}

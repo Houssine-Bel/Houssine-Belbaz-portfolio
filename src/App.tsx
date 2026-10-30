@@ -44,7 +44,7 @@ export default function App() {
     updateMeta("og:description", t("seo.description"), true);
     updateMeta("og:type", "website", true);
     updateMeta("og:locale", language === "fr" ? "fr_FR" : language === "ar" ? "ar_MA" : language === "de" ? "de_DE" : "en_US", true);
-    const socialImage = new URL("./og-image.png", window.location.href).href;
+    const socialImage = new URL("/og-image.png", window.location.origin).href;
     updateMeta("og:image", socialImage, true);
     updateMeta("twitter:card", "summary_large_image");
     updateMeta("twitter:title", t("seo.title"));
@@ -69,7 +69,7 @@ export default function App() {
         className="fixed inset-x-0 top-0 z-[80] h-0.5 origin-left bg-accent shadow-[0_0_12px_rgba(94,184,255,.7)] rtl:origin-right"
         style={{ scaleX: progress }}
       />
-      <AmbientBackground />
+      <AmbientBackground rtl={isRtl} />
       <CustomCursor />
       <motion.div animate={{ opacity: switching ? 0 : 1 }} transition={{ duration: 0.2 }}>
         <Header language={language} onLanguageChange={handleLanguageChange} />

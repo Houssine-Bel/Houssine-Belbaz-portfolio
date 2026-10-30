@@ -6,6 +6,9 @@ import "@fontsource/inter/latin-600.css";
 import "@fontsource/space-grotesk/latin-500.css";
 import "@fontsource/space-grotesk/latin-600.css";
 import "./styles/index.css";
+import "./styles/studio.css";
+import "./styles/glass.css";
+import "./styles/upper-glass.css";
 import "./i18n";
 import App from "./App";
 

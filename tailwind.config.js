@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#080d17",
-        surface: "#0d1422",
-        accent: "#5eb8ff",
-        muted: "#98a4b7",
+        ink: "#05080e",
+        surface: "#0b111c",
+        accent: "#83caff",
+        muted: "#9aa6b8",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

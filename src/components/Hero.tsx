@@ -1,5 +1,13 @@
-import { motion, useInView, useReducedMotion } from "framer-motion";
-import { useRef } from "react";
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
+import { useRef, type PointerEvent } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FiArrowDown,
@@ -7,197 +15,222 @@ import {
   FiCheckCircle,
   FiCode,
   FiDownload,
+  FiGitBranch,
   FiLayers,
   FiTarget,
 } from "react-icons/fi";
+import { SiReact, SiLaravel, SiMysql, SiNodedotjs } from "react-icons/si";
 import type { LocalizedStat } from "../types";
-import HeroBackground from "./HeroBackground";
-import PortraitOrbit from "./PortraitOrbit";
+import useDesktopMotion from "../hooks/useDesktopMotion";
 
-const statVisuals = [
-  { icon: FiLayers, shell: "border-blue-400/20 bg-blue-500/10 text-blue-300", line: "bg-blue-400" },
-  { icon: FiCode, shell: "border-fuchsia-400/20 bg-fuchsia-500/10 text-fuchsia-300", line: "bg-fuchsia-400" },
-  { icon: FiTarget, shell: "border-emerald-400/20 bg-emerald-500/10 text-emerald-300", line: "bg-emerald-400" },
+const statIcons = [FiLayers, FiCode, FiTarget];
+const technologies = [
+  { name: "React.js", icon: SiReact },
+  { name: "Laravel", icon: SiLaravel },
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "MySQL", icon: SiMysql },
 ];
+const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-  const shouldReduceMotion = useReducedMotion();
+  const reducedMotion = useReducedMotion();
+  const desktopMotion = useDesktopMotion();
   const heroRef = useRef<HTMLElement>(null);
-  const heroIsActive = useInView(heroRef, { margin: "180px 0px" });
+  const active = useInView(heroRef, { margin: "100px 0px" });
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const portraitY = useTransform(scrollYProgress, [0, 1], [0, 90]);
+  const pointerX = useMotionValue(0);
+  const pointerY = useMotionValue(0);
+  const rotateY = useSpring(pointerX, { stiffness: 110, damping: 22 });
+  const rotateX = useSpring(pointerY, { stiffness: 110, damping: 22 });
   const stats = t("hero.stats", { returnObjects: true }) as LocalizedStat[];
   const language = i18n.resolvedLanguage ?? "fr";
-  const cvPath = language === "fr" ? "./cv/Houssine-Belbaz-CV-FR.pdf" : "./cv/Houssine-Belbaz-CV-EN.pdf";
+  const cvPath =
+    language === "fr"
+      ? "/cv/Houssine-Belbaz-CV-FR.pdf"
+      : "/cv/Houssine-Belbaz-CV-EN.pdf";
+  const nameParts = t("hero.name").split(" ");
+  const surname = nameParts.pop();
 
-  const container = {
-    hidden: {},
-    visible: { transition: { staggerChildren: shouldReduceMotion ? 0 : 0.1 } },
+  const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    if (!desktopMotion) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    pointerX.set(((event.clientX - rect.left) / rect.width - 0.5) * 7);
+    pointerY.set(((event.clientY - rect.top) / rect.height - 0.5) * -7);
   };
-  const item = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+  const resetPointer = () => {
+    pointerX.set(0);
+    pointerY.set(0);
+  };
+  const reveal = {
+    hidden: { opacity: 0, y: reducedMotion ? 0 : 26 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: shouldReduceMotion ? 0.2 : 0.6, ease: [0.22, 1, 0.36, 1] as const },
+      transition: { duration: reducedMotion ? 0.15 : 0.85, ease },
     },
   };
 
   return (
-    <section ref={heroRef} id="home" className="relative flex min-h-screen items-center overflow-hidden px-5 pb-20 pt-32 sm:px-6 lg:pt-36">
-      <HeroBackground active={heroIsActive} />
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-16 lg:grid-cols-[1.1fr_.9fr] lg:gap-12">
-        <motion.div variants={container} initial="hidden" animate="visible" className="relative z-10">
-          <motion.div variants={item} className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/[0.07] px-3 py-1.5 text-xs font-medium text-emerald-300">
-            <span className="relative flex h-2 w-2" aria-hidden="true">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-50" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-300" />
-            </span>
+    <section
+      ref={heroRef}
+      id="home"
+      className="hero-section"
+      data-active={active}
+    >
+      <div className="hero-container">
+        <motion.div
+          className="hero-copy"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: { staggerChildren: reducedMotion ? 0 : 0.09 },
+            },
+          }}
+        >
+          <motion.div variants={reveal} className="availability-pill">
+            <span className="status-dot" aria-hidden="true" />
             {t("hero.availability")}
           </motion.div>
-
-          <motion.p variants={item} className="mb-4 font-display text-sm font-medium tracking-wide text-accent">
+          <motion.p variants={reveal} className="hero-eyebrow">
             {t("hero.eyebrow")}
           </motion.p>
-
-          <motion.h1 variants={item} className="text-balance font-display text-[clamp(2.75rem,7vw,5.8rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-white">
-            <span className="block text-white/55">{t("hero.greeting")}</span>
-            <span className="block">{t("hero.name")}</span>
+          <motion.h1
+            variants={reveal}
+            className="hero-title"
+            aria-label={`${t("hero.greeting")} ${t("hero.name")}`}
+          >
+            <span className="hero-greeting">{t("hero.greeting")}</span>
+            <span className="hero-first-name">{nameParts.join(" ")}</span>{" "}
+            <span className="hero-last-name">{surname}</span>
           </motion.h1>
-
-          <motion.h2 variants={item} className="text-balance mt-7 max-w-3xl font-display text-xl font-medium leading-snug tracking-[-0.025em] text-white sm:text-2xl lg:text-3xl">
-            {t("hero.headlinePrefix")} <span className="text-accent drop-shadow-[0_0_18px_rgba(94,184,255,.22)]">{t("hero.headlineAccent")}</span>
-          </motion.h2>
-
-          <motion.p variants={item} className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+          <motion.p variants={reveal} className="hero-headline">
+            {t("hero.headlinePrefix")} <span>{t("hero.headlineAccent")}</span>
+          </motion.p>
+          <motion.p variants={reveal} className="hero-description">
             {t("hero.description")}
           </motion.p>
-
-          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+          <motion.div variants={reveal} className="hero-actions">
             <motion.a
               href="#projects"
-              whileHover={shouldReduceMotion ? undefined : { scale: 1.03 }}
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
-              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3.5 text-sm font-semibold text-ink shadow-[0_12px_35px_rgba(94,184,255,.18)] transition-[filter] hover:brightness-110"
+              className="button-primary group"
+              whileTap={reducedMotion ? undefined : { scale: 0.97 }}
             >
-              {t("hero.primaryCta")}
-              <FiArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
+              {t("hero.primaryCta")}{" "}
+              <FiArrowUpRight className="rtl:-scale-x-100" />
             </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={shouldReduceMotion ? undefined : { scale: 1.03 }}
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
-              className="inline-flex items-center justify-center rounded-xl border border-white/12 bg-white/[0.035] px-5 py-3.5 text-sm font-semibold text-white transition-colors hover:border-accent/45 hover:bg-accent/[0.07]"
-            >
-              {t("hero.secondaryCta")}
-            </motion.a>
-            <motion.a
-              href={cvPath}
-              download
-              whileHover={shouldReduceMotion ? undefined : { scale: 1.03 }}
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3.5 text-sm font-medium text-muted transition-colors hover:text-white"
-            >
-              <FiDownload />
-              {t("hero.downloadCta")}
-            </motion.a>
-          </motion.div>
-
-          <motion.div variants={item} className="mt-12 grid max-w-2xl grid-cols-3 gap-3 border-t border-white/10 pt-7">
-            {stats.map((stat, index) => {
-              const visual = statVisuals[index] ?? statVisuals[0];
-              const Icon = visual.icon;
-              return (
-                <div key={stat.label} className="group flex min-w-0 flex-col gap-3 sm:flex-row sm:items-start">
-                  <motion.span
-                    className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl border ${visual.shell}`}
-                    whileHover={shouldReduceMotion ? undefined : { y: -3, rotate: index === 1 ? 4 : -4, scale: 1.05 }}
-                  >
-                    <Icon size={18} />
-                  </motion.span>
-                  <span className="min-w-0">
-                    <strong className="block font-display text-xl font-semibold text-white sm:text-2xl">{stat.value}</strong>
-                    <span className="mt-1 block text-[10px] leading-4 text-muted sm:text-xs sm:leading-5">{stat.label}</span>
-                    <span className={`mt-2 block h-px w-6 ${visual.line}`} aria-hidden="true" />
-                  </span>
-                </div>
-              );
-            })}
+            <a href="#contact" className="button-secondary">
+              {t("hero.secondaryCta")}{" "}
+              <FiArrowUpRight className="rtl:-scale-x-100" />
+            </a>
+            <a href={cvPath} download className="hero-download">
+              <FiDownload /> {t("hero.downloadCta")}
+            </a>
           </motion.div>
         </motion.div>
 
         <motion.div
-          className="relative mx-auto block w-full max-w-[26rem] sm:max-w-[31rem]"
-          initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 28 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: shouldReduceMotion ? 0.2 : 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          className="portrait-stage"
+          initial={{ opacity: 0, y: reducedMotion ? 0 : 36 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease, delay: reducedMotion ? 0 : 0.25 }}
+          onPointerMove={handlePointerMove}
+          onPointerLeave={resetPointer}
         >
-          <div className="absolute inset-10 rounded-full bg-accent/15 blur-[90px]" aria-hidden="true" />
-
-          <PortraitOrbit layer="back" active={heroIsActive} />
-
           <motion.div
-            className="relative z-10 rounded-[2rem] bg-gradient-to-br from-[#70caff] via-blue-500/30 to-blue-700/70 p-px shadow-[0_0_70px_rgba(30,126,255,.2)]"
-            animate={shouldReduceMotion || !heroIsActive ? { y: 0, boxShadow: "0 0 42px rgba(30,126,255,.12)" } : {
-              y: [0, -5, 0],
-              boxShadow: ["0 0 42px rgba(30,126,255,.12)", "0 0 85px rgba(30,126,255,.32)", "0 0 42px rgba(30,126,255,.12)"],
-            }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+            className="portrait-composition"
+            style={
+              desktopMotion ? { rotateX, rotateY, y: portraitY } : undefined
+            }
           >
-            <div className="rounded-[1.95rem] bg-[#07101d]/95 p-2">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] border border-white/[0.08] bg-[#0a101c]">
-                <img
-                  src="./images/houssine-belbaz.jpg"
-                  alt={t("hero.imageAlt")}
-                  width="900"
-                  height="900"
-                  fetchPriority="high"
-                  className="h-full w-full scale-[1.025] object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07101d] via-transparent to-transparent" aria-hidden="true" />
-                <div className="absolute inset-0 rounded-[1.55rem] shadow-[inset_0_0_45px_rgba(10,98,220,.16)]" aria-hidden="true" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <p className="font-display text-2xl font-semibold text-white">{t("hero.name")}</p>
-                  <p className="mt-1 text-sm text-accent">{t("hero.role")}</p>
-                </div>
+            <div className="portrait-coordinate" aria-hidden="true">
+              HB / 01
+            </div>
+            <div className="portrait-frame">
+              <img
+                src="/images/houssine-belbaz.jpg"
+                alt={t("hero.imageAlt")}
+                width="900"
+                height="900"
+                loading="eager"
+                className="portrait-image"
+              />
+              <div className="portrait-caption">
+                <span>{t("hero.name")}</span>
+                <p>{t("hero.role")}</p>
               </div>
             </div>
-          </motion.div>
-
-          <PortraitOrbit layer="front" active={heroIsActive} />
-
-          <motion.div
-            className="glass absolute -end-8 top-10 z-30 hidden rounded-2xl p-4 shadow-glow lg:block"
-            animate={shouldReduceMotion || !heroIsActive ? { y: 0 } : { y: [0, -5, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <p className="font-display text-xs font-medium text-white">{t("hero.visualLabel")}</p>
-            <p className="mt-1 flex items-center gap-1.5 text-[10px] text-emerald-300"><FiCheckCircle /> {t("hero.visualStatus")}</p>
-          </motion.div>
-
-          <motion.div
-            className="glass absolute -start-10 top-[44%] z-30 hidden w-52 rounded-2xl p-4 shadow-glow lg:block"
-            animate={shouldReduceMotion || !heroIsActive ? { y: 0 } : { y: [0, 5, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: -2 }}
-          >
-            <div className="flex items-center justify-between text-[10px] text-muted"><span>{t("hero.visualFrontend")}</span><span className="text-accent">React.js</span></div>
-            <div className="my-2 h-px bg-white/[0.07]" />
-            <div className="flex items-center justify-between text-[10px] text-muted"><span>{t("hero.visualBackend")}</span><span className="text-accent">Laravel · Express</span></div>
-            <div className="my-2 h-px bg-white/[0.07]" />
-            <div className="flex items-center justify-between text-[10px] text-muted"><span>{t("hero.visualData")}</span><span className="text-accent">MySQL</span></div>
+            <div className="portrait-status">
+              <FiCheckCircle aria-hidden="true" />{" "}
+              <span>{t("hero.visualStatus")}</span>
+            </div>
+            <div className="hero-system-panel">
+              <div className="system-panel-header">
+                <FiLayers />
+                <span>{t("hero.visualLabel")}</span>
+                <span className="status-dot" aria-hidden="true" />
+              </div>
+              {[
+                [t("hero.visualFrontend"), "React.js"],
+                [t("hero.visualBackend"), "Laravel · Express"],
+                [t("hero.visualData"), "MySQL"],
+              ].map(([label, value], index) => (
+                <div key={value} className="system-layer">
+                  <span className="system-layer-number">0{index + 1}</span>
+                  <span>{label}</span>
+                  <strong>{value}</strong>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
-      </div>
 
-      <motion.a
-        href="#about"
-        className="absolute bottom-7 start-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs text-muted transition-colors hover:text-accent sm:flex rtl:translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        {t("hero.scroll")}
-        <FiArrowDown className={shouldReduceMotion ? "" : "animate-bounce"} />
-      </motion.a>
+        <motion.div
+          className="hero-bottom"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: reducedMotion ? 0 : 0.85, duration: 0.7 }}
+        >
+          <div className="hero-stats">
+            {stats.map((stat, index) => {
+              const Icon = statIcons[index] ?? FiLayers;
+              return (
+                <div className="hero-stat" key={index}>
+                  <Icon className="hero-stat-icon" aria-hidden="true" />
+                  <div>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <a className="hero-explore" href="#about">
+            <span>{t("hero.scroll")}</span>
+            <FiArrowDown aria-hidden="true" />
+          </a>
+        </motion.div>
+      </div>
+      <div className="technology-strip" aria-label={t("skills.label")}>
+        <div className="technology-strip-inner">
+          {technologies.map(({ name, icon: Icon }) => (
+            <span key={name}>
+              <Icon aria-hidden="true" />
+              {name}
+            </span>
+          ))}
+          <span>
+            <FiGitBranch aria-hidden="true" />
+            n8n
+          </span>
+          <span className="technology-strip-note">{t("footer.tagline")}</span>
+        </div>
+      </div>
     </section>
   );
 }

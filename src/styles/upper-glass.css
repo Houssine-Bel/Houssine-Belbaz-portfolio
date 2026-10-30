@@ -1,0 +1,316 @@
+/* The upper chapters share the same glass material, with one blur layer per
+   surface and no nested tilt. Section headings keep their open editorial space. */
+.about-story-glass {
+  align-self: start;
+  margin-top: 9px;
+  border-radius: 28px;
+}
+.about-story-copy {
+  position: relative;
+  padding: 32px 36px;
+}
+.about-story-copy > p:first-child {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.about-story-copy > p:last-child {
+  padding-top: 22px;
+  border-top: 1px solid rgba(180, 219, 250, 0.12);
+  font-size: 14px;
+  line-height: 1.9;
+  color: #9caec2;
+}
+.about-glass-grid {
+  gap: 22px;
+}
+.process-glass {
+  border-radius: 25px;
+}
+.process-glass:nth-child(2) {
+  --glass-color: 174, 190, 255;
+}
+.process-glass:nth-child(3) {
+  --glass-color: 135, 215, 212;
+}
+.process-glass .process-step {
+  height: 100%;
+  padding: 27px 28px 24px;
+  border: 0;
+}
+.process-glass-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.process-glass .process-number {
+  font-size: 36px;
+  color: rgba(var(--glass-color), 0.55);
+}
+.process-glass-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(var(--glass-color), 0.23);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(var(--glass-color), 0.12), rgba(var(--glass-color), 0.025));
+  box-shadow: inset 0 1px 0 rgba(232, 247, 255, 0.17);
+  color: rgb(var(--glass-color));
+  font-size: 21px;
+  transition: transform 350ms ease;
+}
+.process-glass[data-pointer="true"] .process-glass-icon {
+  transform: translateY(-3px) rotate(-6deg);
+}
+.process-glass h3 {
+  margin-top: 35px;
+}
+.process-glass p {
+  max-width: none;
+  color: #a0b0c3;
+}
+.process-glass-line {
+  display: block;
+  height: 2px;
+  margin-top: 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(var(--glass-color), 0.65), rgba(var(--glass-color), 0.03));
+}
+html[dir="rtl"] .process-glass-line {
+  background: linear-gradient(270deg, rgba(var(--glass-color), 0.65), rgba(var(--glass-color), 0.03));
+}
+
+.liquid-glass.skills-stack-glass {
+  border-radius: 28px;
+  background-color: rgba(9, 20, 34, 0.55);
+}
+.skills-stack-glass .stack-panel-heading {
+  padding: 23px 28px;
+  background: rgba(175, 215, 250, 0.025);
+}
+.skills-stack-glass .stack-panel-heading > span:first-child {
+  color: #d2e6f7;
+}
+.skills-stack-glass .stack-layer {
+  padding: 29px 28px;
+}
+.skills-stack-glass .stack-layer + .stack-layer {
+  border-top-color: rgba(178, 215, 250, 0.14);
+}
+.skills-stack-glass .stack-layer-top > svg {
+  box-sizing: content-box;
+  padding: 10px;
+  border: 1px solid rgba(163, 213, 255, 0.21);
+  border-radius: 13px;
+  background: rgba(142, 202, 250, 0.055);
+  box-shadow: inset 0 1px 0 rgba(235, 248, 255, 0.12);
+}
+.skills-stack-glass .stack-layer-top h3 {
+  font-size: 23px;
+}
+.skills-stack-glass .stack-index {
+  color: #86a7c5;
+}
+.skills-stack-glass .stack-layer > p,
+.skills-stack-glass .stack-technologies {
+  margin-inline-start: 34px;
+}
+.skills-stack-glass .stack-layer > p {
+  color: #9eafc3;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.skills-stack-glass .stack-technologies li {
+  padding: 7px 10px;
+  border-color: rgba(162, 212, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(139, 201, 250, 0.04);
+  color: #b9d8ee;
+}
+.support-skills {
+  gap: 22px;
+  margin-top: 40px;
+}
+.support-glass {
+  border-radius: 24px;
+}
+.support-glass:nth-child(2) {
+  --glass-color: 162, 212, 218;
+}
+.support-glass:nth-child(3) {
+  --glass-color: 185, 179, 250;
+}
+.support-skills .support-skill-card {
+  height: 100%;
+  padding: 26px;
+  border: 0;
+}
+.support-glass .support-skill-title {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.support-glass .support-skill-title > svg {
+  box-sizing: content-box;
+  padding: 10px;
+  border: 1px solid rgba(var(--glass-color), 0.23);
+  border-radius: 13px;
+  background: rgba(var(--glass-color), 0.055);
+  color: rgb(var(--glass-color));
+}
+.support-glass .support-skill-title h3 {
+  flex: 1;
+  min-width: 100px;
+}
+.support-glass .support-skill-title > span {
+  color: #7894b0;
+}
+.support-glass p {
+  margin-top: 20px;
+  color: #9eafc3;
+  line-height: 1.9;
+}
+.support-glass ul {
+  gap: 7px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(178, 215, 250, 0.12);
+}
+.support-glass li {
+  padding: 5px 9px;
+  border: 1px solid rgba(var(--glass-color), 0.15);
+  border-radius: 7px;
+  background: rgba(var(--glass-color), 0.035);
+  color: #b8cbdf;
+  font-size: 10px;
+}
+
+.journey-glass {
+  border-radius: 26px;
+}
+.journey-timeline-item:nth-of-type(2n) .journey-glass {
+  --glass-color: 159, 199, 231;
+}
+.journey-glass .journey-entry {
+  padding: 29px 30px;
+  border: 0;
+  border-radius: inherit;
+}
+.journey-glass .journey-entry:hover,
+html[dir="rtl"] .journey-glass .journey-entry:hover {
+  transform: none;
+  box-shadow: none;
+}
+.journey-glass .journey-entry > p {
+  padding-top: 21px;
+  border-top: 1px solid rgba(180, 219, 250, 0.12);
+  color: #c1d0de;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.journey-glass .journey-entry li {
+  color: #9caec2;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.journey-timeline-item > .timeline-node {
+  top: 30px;
+}
+
+@media (max-width: 1100px) {
+  .skills-stack-glass .stack-panel-heading {
+    padding: 21px 22px;
+  }
+  .skills-stack-glass .stack-layer {
+    padding: 25px 22px;
+  }
+  .support-skills .support-skill-card {
+    padding: 24px 20px;
+  }
+}
+@media (max-width: 1023px), (hover: none), (pointer: coarse) {
+  .liquid-glass.skills-stack-glass {
+    background-color: rgba(10, 22, 37, 0.86);
+  }
+}
+@media (max-width: 767px) {
+  .about-story-glass {
+    margin-top: 0;
+  }
+  .about-story-copy {
+    padding: 25px 23px;
+  }
+  .about-story-copy > p:first-child {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+  .about-glass-grid,
+  .support-skills {
+    gap: 16px;
+  }
+  .process-glass .process-step {
+    padding: 24px;
+  }
+  .process-glass h3 {
+    margin-top: 26px;
+  }
+  .process-glass p {
+    max-width: 480px;
+  }
+  .skills-stack-glass .stack-panel-heading {
+    padding: 20px;
+  }
+  .skills-stack-glass .stack-layer {
+    padding: 24px 20px;
+  }
+  .skills-stack-glass .stack-layer-top {
+    gap: 10px;
+  }
+  .skills-stack-glass .stack-layer-top > svg {
+    width: 17px;
+    height: 17px;
+    padding: 8px;
+    border-radius: 11px;
+  }
+  .skills-stack-glass .stack-layer-top h3 {
+    font-size: 20px;
+  }
+  .skills-stack-glass .stack-layer > p,
+  .skills-stack-glass .stack-technologies {
+    margin-inline-start: 0;
+  }
+  .skills-stack-glass .stack-layer > p {
+    font-size: 12px;
+  }
+  .support-skills .support-skill-card {
+    padding: 24px;
+  }
+  .journey-glass .journey-entry {
+    padding: 25px 22px;
+  }
+  .journey-glass .journey-entry > p {
+    font-size: 13px;
+  }
+  .journey-timeline-item > .timeline-node {
+    top: 27px;
+  }
+}
+@media (max-width: 374px) {
+  .skills-stack-glass .stack-layer-top h3 {
+    font-size: 18px;
+  }
+  .skills-stack-glass .stack-index {
+    display: none;
+  }
+  .journey-glass .journey-entry {
+    padding: 23px 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .process-glass-icon {
+    transition: none;
+  }
+  .process-glass[data-pointer="true"] .process-glass-icon {
+    transform: none;
+  }
+}

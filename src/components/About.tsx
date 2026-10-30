@@ -1,52 +1,67 @@
-import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiCheckCircle, FiCode, FiCompass } from "react-icons/fi";
 import type { AboutCard } from "../types";
 import AnimatedSection from "./AnimatedSection";
 import SectionHeading from "./SectionHeading";
+import LiquidGlass from "./LiquidGlass";
+
+const processIcons = [FiCompass, FiCode, FiCheckCircle];
 
 export default function About() {
   const { t } = useTranslation();
-  const shouldReduceMotion = useReducedMotion();
   const cards = t("about.cards", { returnObjects: true }) as AboutCard[];
 
   return (
-    <AnimatedSection id="about" labelledBy="about-title" className="px-5 sm:px-6">
+    <AnimatedSection
+      id="about"
+      labelledBy="about-title"
+      className="about-section px-5 sm:px-6"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
-          <SectionHeading id="about-title" label={t("about.label")} title={t("about.title")} />
-          <div className="lg:pt-10">
-            <p className="text-lg leading-9 text-white/85 sm:text-xl">{t("about.description")}</p>
-            <p className="mt-5 leading-8 text-muted">{t("about.body")}</p>
-          </div>
+          <SectionHeading
+            id="about-title"
+            label={t("about.label")}
+            title={t("about.title")}
+          />
+          <LiquidGlass className="about-story-glass" tilt={false}>
+            <div className="about-story-copy">
+              <p className="text-lg leading-9 text-white/85 sm:text-xl">
+                {t("about.description")}
+              </p>
+              <p className="mt-5 leading-8 text-muted">{t("about.body")}</p>
+            </div>
+          </LiquidGlass>
         </div>
 
-        <motion.div
-          className="mt-14 grid gap-4 md:grid-cols-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={{ visible: { transition: { staggerChildren: shouldReduceMotion ? 0 : 0.08 } } }}
-        >
-          {cards.map((card) => (
-            <motion.article
-              key={card.number}
-              variants={{
-                hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-              }}
-              whileHover={shouldReduceMotion ? undefined : { y: -6 }}
-              className="glass premium-card group rounded-2xl p-6 transition-[border-color,box-shadow] duration-300 hover:border-accent/45 hover:shadow-glow"
-            >
-              <div className="flex items-start justify-between">
-                <span className="font-display text-xs font-semibold tracking-widest text-accent">{card.number}</span>
-                <FiArrowUpRight className="text-white/25 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent rtl:-scale-x-100 rtl:group-hover:-translate-x-1" />
-              </div>
-              <h3 className="mt-10 font-display text-xl font-semibold text-white">{card.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-muted">{card.description}</p>
-            </motion.article>
-          ))}
-        </motion.div>
+        <div className="process-grid about-glass-grid mt-16 grid md:grid-cols-3">
+          {cards.map((card, index) => {
+            const Icon = processIcons[index % processIcons.length];
+            return (
+              <LiquidGlass
+                key={card.number}
+                className="process-glass"
+                delay={index * 0.08}
+              >
+                <article className="process-step group">
+                  <div className="process-glass-top">
+                    <span className="process-number">{card.number}</span>
+                    <span className="process-glass-icon" aria-hidden="true">
+                      <Icon />
+                    </span>
+                  </div>
+                  <h3 className="mt-9 font-display text-2xl font-medium text-white">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    {card.description}
+                  </p>
+                  <span className="process-glass-line" aria-hidden="true" />
+                </article>
+              </LiquidGlass>
+            );
+          })}
+        </div>
       </div>
     </AnimatedSection>
   );

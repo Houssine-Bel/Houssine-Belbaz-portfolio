@@ -9,7 +9,7 @@ export default function BrandMark({ className = "" }: BrandMarkProps) {
       aria-hidden="true"
     >
       <img
-        src="./logo-mark.svg"
+        src="/logo-mark.svg"
         alt=""
         width="64"
         height="64"
